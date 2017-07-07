@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movies</title>
+	<meta name="description" content="Search for your favorite movies.">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/x-tmpl-mustache" id="list_template">
+		<ul>
+			{{#Search}}
+			<li><a id="{{imdbID}}" href="#">{{Title}}</a></li>
+			{{/Search}}
+		</ul>
+	</script>
+	<script type="text/x-tmpl-mustache" id="details_template">
+    <h2>{{Title}} ({{Year}})</h2>
+    <h3>Starring: {{Actors}}</h3>
+    <img id="poster" src="{{Poster}}">
+    <p>{{Plot}}</p>
+	</script>
+</head>
+<body>
+	<div id="search">
+		<label>Movie name:</label>
+		<input id="search_text" type="text">
+		<button id="search_button">Search</button>
+	</div>
+	<div id="list"></div>
+	<div id="details"></div>
+	<!-- load scripts -->
+	<script src="js/mustache.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
