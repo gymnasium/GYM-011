@@ -1,6 +1,6 @@
 var listTemplate = document.getElementById("list_template").innerHTML,
 	detailsTemplate = document.getElementById("details_template").innerHTML,
-	searchText = document.getElementByID("search_text"),
+	searchText = document.getElementById("search_text"),
 	listDiv = document.getElementById("list"),
 	detailsDiv = document.getElementById("details"),
 	searchBtn = document.getElementById("search_button");
@@ -13,6 +13,7 @@ var listTemplate = document.getElementById("list_template").innerHTML,
  * When you have it, replace the "aquent" below with your own key.
  */
 var apiKey = "aquent";
+
 
 searchBtn.addEventListener("click", function() {
 	var title = searchText.value;
